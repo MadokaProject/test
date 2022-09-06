@@ -1,2 +1,1 @@
-for i in range(10):
-    print("hello world", i)
+print('\n'.join(f"hello world {i}" for i in range(10)))
