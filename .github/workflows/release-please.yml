@@ -13,10 +13,14 @@ jobs:
         id: release
         with:
           release-type: simple
-      - run: echo "${{ steps.release.outputs.version }}"
+      - name: merge-to-master
         if: ${{ steps.release.outputs.release_created }}
-  publish:
-    if: ${{ jobs.release-please.steps.release.outputs.release_created }}
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "${{ jobs.release-please.steps.release.outputs.version }}"
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git clone https://github.com/MadokaProject/test.git merge
+          cd merge
+          git fetch origin
+          git checkout master
+          git merge release
+          git push "https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/MadokaProject/test.git"
