@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/MadokaProject/test/compare/v2.0.0...v2.1.0) (2022-09-08)
+
+
+### Features
+
+* **ci:** test ([a59d6f4](https://github.com/MadokaProject/test/commit/a59d6f48cf7ae2803032b173b469b75667d342e8))
+* **ci:** test ([0c817da](https://github.com/MadokaProject/test/commit/0c817dac494336f6b90b099052169bd317d1e7b8))
+
 ## [2.0.0](https://github.com/MadokaProject/test/compare/v1.3.0...v2.0.0) (2022-09-08)
 
 
