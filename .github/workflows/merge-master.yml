@@ -1,7 +1,7 @@
 name: merge-master
 
 on:
-  release:
+  label:
     types:
       - created
 
@@ -13,9 +13,9 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git clone https://github.com/MadokaProject/Madoka.git madoka
-          cd madoka
+          git clone https://github.com/MadokaProject/test.git test
+          cd test
           git fetch origin
           git checkout master
-          git merge dev
-          git push "https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/MadokaProject/Madoka.git"
+          git merge release
+          git push "https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/MadokaProject/test.git"
