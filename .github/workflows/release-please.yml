@@ -10,5 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
           release-type: simple
+      - name: merge-to-master
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git clone https://github.com/MadokaProject/test.git merge
+          cd merge
+          git fetch origin
+          git checkout master
+          git merge release
+          git push "https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/MadokaProject/test.git"
