@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.0](https://github.com/MadokaProject/test/compare/v2.0.0...v2.1.0) (2022-09-09)
+
+
+### Features
+
+* **23:** ewgwe ([b35ed5b](https://github.com/MadokaProject/test/commit/b35ed5bf78a255a676ab5f8457a2f41d5d57e2e6))
+* **ci:** tesewgjwe ([d5e88e7](https://github.com/MadokaProject/test/commit/d5e88e768284274e41e25b2b4c5ad4ce687b5a25))
+* **test:** testg ([d834479](https://github.com/MadokaProject/test/commit/d834479dbfff2db1772325166a9abcc0aacf30d6))
+
 ## [2.0.0](https://github.com/MadokaProject/test/compare/v1.2.0...v2.0.0) (2022-09-09)
 
 
